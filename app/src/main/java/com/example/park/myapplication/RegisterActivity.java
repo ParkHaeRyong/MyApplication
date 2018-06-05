@@ -25,7 +25,7 @@ import java.net.URL;
 
 import java.util.regex.Pattern;
 
-
+/**/
 public class RegisterActivity extends Activity {
 
     EditText textId, textPwd, textName;
