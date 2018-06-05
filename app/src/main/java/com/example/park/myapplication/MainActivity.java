@@ -14,6 +14,7 @@ import java.io.*;
 import java.net.*;
 
 public class MainActivity extends Activity {
+
     EditText userId, userPwd;
     Button loginBtn, joinBtn;
     @Override
