@@ -68,7 +68,7 @@ public class RegisterActivity extends Activity {
 
                 String str;
 
-                URL url = new URL("http://192.168.100.71:8080/Android/"+strings[0]);
+                URL url = new URL("http://192.168.100.71:8080/webProject/"+strings[0]);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
                 conn.setRequestMethod("POST");
@@ -182,7 +182,7 @@ public class RegisterActivity extends Activity {
                             Toast.makeText(RegisterActivity.this, "이름을 입력해 주세요 (한글,영어)", Toast.LENGTH_SHORT).show();
                             return;
                         } else {
-                            String jsp = "insert.jsp";
+                            String jsp = "androidInsert.jsp";
                             JSONObject jsonObject = new JSONObject();
                             jsonObject.put("ID",ID);
                             jsonObject.put("PWD",PWD);
@@ -205,7 +205,7 @@ public class RegisterActivity extends Activity {
                             Toast.makeText(RegisterActivity.this, "ID는 공백일 수 없으며 숫자와 영어만 가능합니다.", Toast.LENGTH_SHORT).show();
                             return;
                         }else {
-                            String jsp = "regId.jsp";
+                            String jsp = "androidRegid.jsp";
                             new CustomTask().execute(jsp,ID);
                         }
                     } catch (Exception e) {
